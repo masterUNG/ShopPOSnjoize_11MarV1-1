@@ -65,6 +65,7 @@ public class MemberListViewAdapter extends BaseAdapter {
         final String idString = nameMemberModelList.get(position).getIdString();
         holder.name.setText(nameMemberModelList.get(position).getNameMemberString());
 
+//        true ==> from tabehose member, false ==> from button
         if (!statusABoolean) {
 
             holder.name.setOnClickListener(new View.OnClickListener() {
@@ -110,14 +111,14 @@ public class MemberListViewAdapter extends BaseAdapter {
 
         }
 
-
+//True unSeen Button
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("20FebV2", "You Click Arrow id==> " + idString);
                 Intent intent = new Intent(parent.getContext(), MemberActivity.class);
                 intent.putExtra("id", idString);
-                intent.putExtra("Status", false);
+                intent.putExtra("Status", statusABoolean);
                 parent.getContext().startActivity(intent);
             }
         });
