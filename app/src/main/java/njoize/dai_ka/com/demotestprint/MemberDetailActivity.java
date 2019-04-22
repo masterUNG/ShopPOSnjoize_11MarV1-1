@@ -2,6 +2,7 @@ package njoize.dai_ka.com.demotestprint;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 public class MemberDetailActivity extends AppCompatActivity {
 
@@ -11,6 +12,8 @@ public class MemberDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_member_detail);
+
+        Log.d("22AprilV1", "MemberDetailActivity Work");
 
 //        Get Value
         idString = getIntent().getStringExtra("idString");
